@@ -7,23 +7,21 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class ReversePolishNotationCalculatorTest {
 
+    ReversePolishNotationCalculator calculator = new ReversePolishNotationCalculator();
     @Test
     public void shouldCalculateAddition() {
-        ReversePolishNotationCalculator calculator = new ReversePolishNotationCalculator();
         int result = calculator.calculatePolishNotation("1 2 +");
         assertEquals(3,result);
     }
 
     @Test
     public void shouldCalculateDecreasing() {
-        ReversePolishNotationCalculator calculator = new ReversePolishNotationCalculator();
         int result = calculator.calculatePolishNotation("1 2 -");
         assertEquals(-1,result);
     }
 
     @Test
     public void shouldCalculateMultiplication() {
-        ReversePolishNotationCalculator calculator = new ReversePolishNotationCalculator();
         int result = calculator.calculatePolishNotation("1 2 *");
         assertEquals(2,result);
     }
